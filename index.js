@@ -19,6 +19,9 @@ submit.addEventListener('click', () => {
         firstCapy.classList.replace('block', 'hidden');
         secondCapy.classList.replace('hidden', 'block');
         setTimeout(() => {
+            firstCard.classList.replace('z-40', 'z-0');
+        }, 500);
+        setTimeout(() => {
             firstCard.classList.add('hidden');
         }, 900);
     } else {
@@ -28,13 +31,19 @@ submit.addEventListener('click', () => {
 
 okay.addEventListener('click', () => {
     setTimeout(() => {
+            secondCard.classList.replace('z-50', 'z-0');
+    }, 500);
+    setTimeout(() => {
             secondCard.classList.add('hidden');
-        }, 900);
+    }, 900);
 
         thirdCard.classList.add('slideNext');
 });
 
 okay2.addEventListener('click', () => {
+    setTimeout(() => {
+        thirdCard.classList.replace('z-50', 'z-0');
+    }, 500);
     setTimeout(() => {
         thirdCard.classList.add('hidden');
     }, 900);
@@ -43,4 +52,5 @@ okay2.addEventListener('click', () => {
     thirdCapy.classList.replace('hidden', 'block');
     fourthCard.classList.add('slideNext');
 });
+
 
